@@ -15,7 +15,7 @@ alive = subset(data, death_dummy == 0)
 mean(dead$age, na.rm = TRUE)
 mean(alive$age, na.rm = TRUE)
 # Statistic significat?
-t.test(alive$age, dead$age, alternative="two.sided", conf.level = 0.99)
+z.test(alive$age, dead$age, alternative="two.sided", conf.level = 0.99)
 # diferenta dintre o persoana care moare si una care traieste este in intervalul -25.52122 si -15.50661
 # p-value is 2.2e-16 ~ 0 < 0.05, deci oamenii care au murit de Covid 19 sunt mai batrani
 
@@ -27,6 +27,6 @@ women = subset(data, gender == "female")
 mean(men$death_dummy, na.rm = TRUE) #8.5%!
 mean(women$death_dummy, na.rm = TRUE) #3.7%
 # Statistic significat?
-t.test(men$death_dummy, women$death_dummy, alternative="two.sided", conf.level = 0.99)
+z.test(men$death_dummy, women$death_dummy, alternative="two.sided", conf.level = 0.99)
 # Barbatii au cu 0,8% pana la 8.8% sanse mai mari de mortalitate in cazul infectarii cu Covid19
 # p-value = 0.002 < 0.05, semnificativ statistic
