@@ -26,7 +26,7 @@ men = subset(data, gender == "male")
 women = subset(data, gender == "female")
 mean(men$deaths_dummy, na.rm = TRUE) #8.5%!
 mean(women$deaths_dummy, na.rm = TRUE) #3.7%
-# Statistic significat?
 z.test(men$deaths_dummy, women$deaths_dummy, alternative="two.sided", conf.level = 0.99)
+# Statistic significat?
 # Barbatii au cu 0,8% pana la 8.8% sanse mai mari de mortalitate in cazul infectarii cu Covid19
 # p-value = 0.002 < 0.05, semnificativ statistic
